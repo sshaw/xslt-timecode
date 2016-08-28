@@ -1,6 +1,8 @@
 Timecode
 =======
 
+[![Build Status](https://travis-ci.org/sshaw/xslt-timecode.svg)](https://travis-ci.org/sshaw/xslt-timecode)
+
 A pure, dependency free, XSLT 1.0 library for video timecode manipulation.
 
 Supports

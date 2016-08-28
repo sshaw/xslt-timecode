@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!DOCTYPE test [
+  <!ENTITY % block "
+	<x>
+	  <a>123</a>
+	</x>
+">
+]>
+
+<test>
+  Just to run the test case
+</test>

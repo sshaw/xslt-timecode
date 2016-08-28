@@ -825,7 +825,8 @@
 
 	<xsl:variable name="pass-or-fail-message">
 	    <xsl:choose>
-		<xsl:when test="$result = $expect">pass</xsl:when>
+		<!-- trailing space on output is intentional -->
+		<xsl:when test="$result = $expect">pass </xsl:when>
 		<xsl:otherwise>fail (expected: <xsl:value-of select="$expect"/>, result: <xsl:value-of select="$result"/>)</xsl:otherwise>
 	    </xsl:choose>
 	</xsl:variable>
