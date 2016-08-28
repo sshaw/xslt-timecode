@@ -11,6 +11,7 @@ libxml: COMMAND := xsltproc $(XSLT) $(XML) 2>&1
 libxml:
 	$(run-tests)
 
+# w/o Homebrew: java -jar /usr/share/java/Saxon-HE.jar
 saxon: COMMAND := saxon -xsl:$(XSLT) -s:$(XML) 2>&1 > /dev/null
 saxon:
 	$(run-tests)

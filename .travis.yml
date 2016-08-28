@@ -1,0 +1,8 @@
+# Saxon requires Java
+language: java
+before_install:
+  - sudo apt-get -qq update
+  - sudo apt-get install -y xalan
+  - sudo apt-get install -y xsltproc
+  #- sudo apt-get install -y libsaxonhe-java
+script: make test
