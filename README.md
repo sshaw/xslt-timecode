@@ -10,6 +10,7 @@ Supports
 * Drop/nondrop frame timecodes
 * Arithmetic
 * Conversions: to/from drop/nondrop, timecode to/from frames
+* Formatting
 * Field extraction
 
 
@@ -40,11 +41,11 @@ Examples
 	  <xsl:variable name="frames">
 	      <xsl:call-template name="tc:to-frames">
 	          <xsl:with-param name="timecode">00:00:01:02</xsl:with-param>
-		      <xsl:with-param name="dropframe" select="true()"/>
+		      <xsl:with-param name="drop-frame" select="true()"/>
 	      </xsl:call-template>
 	  </xsl:variable>
 
-	  <!-- No need to set $dropframe if the timecode has a dropframe delimiter (";" or ".") -->
+	  <!-- No need to set $drop-frame if the timecode has a drop frame delimiter (";" or ".") -->
       <!-- Returns: 1800 -->
 	  <xsl:variable name="frames">
 	      <xsl:call-template name="tc:to-frames">
@@ -90,7 +91,7 @@ Templates
 * [Overview](#overview)
 * [Arithmetic](#arithmetic)
 * [Conversion](#conversion)
-* [Parsing & Formatting](#parsing-formatting)
+* [Parsing & Formatting](#parsingformatting)
 * [Validation](#validation)
 
 ### Overview
@@ -116,10 +117,10 @@ On success the resulting timecode is returned.
 
 * `timecode1` - Left operand, **required**
 * `fps1` - `timecode1`'s frames per second
-* `dropframe1` - Set to `true()` if `timecode1` is drop frame
+* `drop-frame1` - Set to `true()` if `timecode1` is drop frame
 * `timecode2` - Right operand, **required**
 * `fps2` - `timecode2`'s frames per second
-* `dropframe2` - Set to `true()` if `timecode2` is drop frame
+* `drop-frame2` - Set to `true()` if `timecode2` is drop frame
 
 #### `divide`
 
@@ -136,7 +137,7 @@ On success the resulting timecode is returned.
 * `timecode` - A timecode to multiply, **required**
 * `by` - Value to multiply timecode by, **required**. This is a numeric value, not a timecode
 * `fps` - Frames per second of `timecode`
-* `dropframe` - `true()` if `timecode` is dropframe, defaults to `false()`
+* `drop-frame` - `true()` if `timecode` is drop frame, defaults to `false()`
 
 #### `subtract`
 
@@ -144,10 +145,10 @@ On success the resulting timecode is returned.
 
 * `timecode1` - Left operand, **required**
 * `fps1` - `timecode1`'s frames per second
-* `dropframe1` - Set to `true()` if `timecode1` is drop frame
+* `drop-frame1` - Set to `true()` if `timecode1` is drop frame
 * `timecode2` - Right operand, **required**
 * `fps2` - `timecode2`'s frames per second
-* `dropframe2` - Set to `true()` if `timecode2` is drop frame
+* `drop-frame2` - Set to `true()` if `timecode2` is drop frame
 
 ### Conversion
 
@@ -157,9 +158,9 @@ Convert a timecode's frame rate, format, or to/from drop frame.
 
 * `timecode` - Timecode to convert, **required**
 * `fps` - `timecode`'s frames per second
-* `dropframe` - Set to `true()` if `timecode` is drop frame
+* `drop-frame` - Set to `true()` if `timecode` is drop frame
 * `to-fps` - Frames per second to convert `timecode` to
-* `to-dropframe` - Convert `timecode` to drop frame
+* `to-drop-frame` - Convert `timecode` to drop frame
 * `delimiter` - String use to delimit the hours, minutes, and seconds in the resulting timecode, defaults to `":"`
 * `frame-delimiter` - String use to delimit frames in the resulting timecode, defaults to `":"`
 
@@ -171,7 +172,7 @@ Converts the given timecode to frames.
 
 * `timecode` - Timecode to convert, **required**
 * `fps` - `timecode`'s frames per second
-* `dropframe` - Set to `true()` if `timecode` is a drop frame
+* `drop-frame` - Set to `true()` if `timecode` is a drop frame
 
 ##### Returns
 
@@ -235,7 +236,7 @@ Create a timecode from the given number of frames.
 
 * `frames` - Frames to create a timecode from, **required**
 * `fps` - `frames` frames per second
-* `dropframe` - Set to `true()` if `frames` are drop frames
+* `drop-frame` - Set to `true()` if `frames` are drop frames
 * `delimiter` - String use to delimit the hours, minutes, and seconds in the resulting timecode, defaults to `":"`
 * `frame-delimiter` - String use to delimit frames in the resulting timecode, defaults to `":"`
 

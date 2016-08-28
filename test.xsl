@@ -39,7 +39,7 @@
 		<xsl:call-template name="tc:from-frames">
 		    <xsl:with-param name="frames">1800</xsl:with-param>
 		    <xsl:with-param name="fps">29.97</xsl:with-param>
-		    <xsl:with-param name="dropframe" select="true()"/>
+		    <xsl:with-param name="drop-frame" select="true()"/>
 		</xsl:call-template>
 	    </xsl:with-param>
 	</xsl:call-template>
@@ -51,7 +51,7 @@
 		<xsl:call-template name="tc:from-frames">
 		    <xsl:with-param name="frames">1800</xsl:with-param>
 		    <xsl:with-param name="fps">29.97</xsl:with-param>
-		    <xsl:with-param name="dropframe" select="false()"/>
+		    <xsl:with-param name="drop-frame" select="false()"/>
 		</xsl:call-template>
 	    </xsl:with-param>
 	</xsl:call-template>
@@ -74,7 +74,7 @@
 		<xsl:call-template name="tc:from-frames">
 		    <xsl:with-param name="frames">1387252</xsl:with-param>
 		    <xsl:with-param name="fps">29.97</xsl:with-param>
-		    <xsl:with-param name="dropframe" select="true()"/>
+		    <xsl:with-param name="drop-frame" select="true()"/>
 		</xsl:call-template>
 	    </xsl:with-param>
 	</xsl:call-template>
@@ -86,7 +86,7 @@
 		<xsl:call-template name="tc:from-frames">
 		    <xsl:with-param name="frames">1387252</xsl:with-param>
 		    <xsl:with-param name="fps">29.97</xsl:with-param>
-		    <xsl:with-param name="dropframe" select="false()"/>
+		    <xsl:with-param name="drop-frame" select="false()"/>
 		</xsl:call-template>
 	    </xsl:with-param>
 	</xsl:call-template>
@@ -167,7 +167,7 @@
 		<xsl:call-template name="tc:from-frames">
 		    <xsl:with-param name="frames">215999</xsl:with-param>
 		    <xsl:with-param name="fps">59.94</xsl:with-param>
-		    <xsl:with-param name="dropframe" select="true()"/>
+		    <xsl:with-param name="drop-frame" select="true()"/>
 		</xsl:call-template>
 	    </xsl:with-param>
 	</xsl:call-template>
@@ -179,7 +179,7 @@
 		<xsl:call-template name="tc:from-frames">
 		    <xsl:with-param name="frames">3600</xsl:with-param>
 		    <xsl:with-param name="fps">59.94</xsl:with-param>
-		    <xsl:with-param name="dropframe" select="true()"/>
+		    <xsl:with-param name="drop-frame" select="true()"/>
 		</xsl:call-template>
 	    </xsl:with-param>
 	</xsl:call-template>
@@ -191,7 +191,7 @@
 		<xsl:call-template name="tc:from-frames">
 		    <xsl:with-param name="frames">1387252</xsl:with-param>
 		    <xsl:with-param name="fps">59.94</xsl:with-param>
-		    <xsl:with-param name="dropframe" select="true()"/>
+		    <xsl:with-param name="drop-frame" select="true()"/>
 		</xsl:call-template>
 	    </xsl:with-param>
 	</xsl:call-template>
@@ -275,7 +275,7 @@
 		<xsl:call-template name="tc:to-frames">
 		    <xsl:with-param name="timecode">00:01:00:02</xsl:with-param>
 		    <xsl:with-param name="fps">29.97</xsl:with-param>
-		    <xsl:with-param name="dropframe" select="true()"/>
+		    <xsl:with-param name="drop-frame" select="true()"/>
 		</xsl:call-template>
 	    </xsl:with-param>
 	</xsl:call-template>
@@ -309,7 +309,7 @@
 		<xsl:call-template name="tc:to-frames">
 		    <xsl:with-param name="timecode">12:51:28:00</xsl:with-param>
 		    <xsl:with-param name="fps">29.97</xsl:with-param>
-		    <xsl:with-param name="dropframe" select="true()"/>
+		    <xsl:with-param name="drop-frame" select="true()"/>
 		</xsl:call-template>
 	    </xsl:with-param>
 	</xsl:call-template>
@@ -331,7 +331,7 @@
 	    <xsl:with-param name="result">
 		<xsl:call-template name="tc:to-frames">
     		    <xsl:with-param name="timecode" select="'00:01:00:02'"/>
-    		    <xsl:with-param name="dropframe" select="true()"/>
+    		    <xsl:with-param name="drop-frame" select="true()"/>
     		    <xsl:with-param name="fps" select="30"/>
 		</xsl:call-template>
 	    </xsl:with-param>
@@ -343,7 +343,7 @@
 	    <xsl:with-param name="result">
 		<xsl:call-template name="tc:to-frames">
     		    <xsl:with-param name="timecode" select="'00:10:00:00'"/>
-    		    <xsl:with-param name="dropframe" select="true()"/>
+    		    <xsl:with-param name="drop-frame" select="true()"/>
     		    <xsl:with-param name="fps" select="30"/>
 		</xsl:call-template>
 	    </xsl:with-param>
@@ -367,7 +367,7 @@
 		<xsl:call-template name="tc:to-frames">
 		    <xsl:with-param name="timecode">00:01:00:04</xsl:with-param>
 		    <xsl:with-param name="fps">59.94</xsl:with-param>
-		    <xsl:with-param name="dropframe" select="true()"/>
+		    <xsl:with-param name="drop-frame" select="true()"/>
 		</xsl:call-template>
 	    </xsl:with-param>
 	</xsl:call-template>
@@ -491,8 +491,8 @@
 	    <xsl:with-param name="result">
 		<xsl:call-template name="tc:convert">
 		    <xsl:with-param name="timecode">00:01:00:02</xsl:with-param>
-		    <xsl:with-param name="dropframe" select="true()"/>
-		    <xsl:with-param name="to-dropframe" select="false()"/>
+		    <xsl:with-param name="drop-frame" select="true()"/>
+		    <xsl:with-param name="to-drop-frame" select="false()"/>
 		</xsl:call-template>
 	    </xsl:with-param>
 	</xsl:call-template>
@@ -504,8 +504,8 @@
 	    <xsl:with-param name="result">
 		<xsl:call-template name="tc:convert">
 		    <xsl:with-param name="timecode">00:01:00:02</xsl:with-param>
-		    <xsl:with-param name="dropframe" select="true()"/>
-		    <xsl:with-param name="to-dropframe" select="false()"/>
+		    <xsl:with-param name="drop-frame" select="true()"/>
+		    <xsl:with-param name="to-drop-frame" select="false()"/>
 		</xsl:call-template>
 	    </xsl:with-param>
 	</xsl:call-template>
@@ -517,9 +517,9 @@
 		<xsl:call-template name="tc:convert">
 		    <xsl:with-param name="timecode">00:01:00:02</xsl:with-param>
 		    <xsl:with-param name="fps" select="29.97"/>
-		    <xsl:with-param name="dropframe" select="true()"/>
+		    <xsl:with-param name="drop-frame" select="true()"/>
 		    <xsl:with-param name="to-fps" select="59.94"/>
-		    <xsl:with-param name="to-dropframe" select="false()"/>
+		    <xsl:with-param name="to-drop-frame" select="false()"/>
 		</xsl:call-template>
 	    </xsl:with-param>
 	</xsl:call-template>
@@ -530,7 +530,7 @@
 	    <xsl:with-param name="result">
 		<xsl:call-template name="tc:convert">
 		    <xsl:with-param name="timecode">00:01:00:02</xsl:with-param>
-		    <xsl:with-param name="dropframe" select="true()"/>
+		    <xsl:with-param name="drop-frame" select="true()"/>
 		    <xsl:with-param name="frame-delimiter" select="'.'"/>
 		</xsl:call-template>
 	    </xsl:with-param>
@@ -621,7 +621,7 @@
 		<xsl:call-template name="tc:valid">
 		    <xsl:with-param name="timecode">00:01:00.02</xsl:with-param>
 		    <xsl:with-param name="fps">29.97</xsl:with-param>
-		    <xsl:with-param name="dropframe" select="true()"/>
+		    <xsl:with-param name="drop-frame" select="true()"/>
 		</xsl:call-template>
 	    </xsl:with-param>
 	</xsl:call-template>
@@ -633,7 +633,7 @@
 		<xsl:call-template name="tc:valid">
 		    <xsl:with-param name="timecode">00:01:00;02</xsl:with-param>
 		    <xsl:with-param name="fps">29.97</xsl:with-param>
-		    <xsl:with-param name="dropframe" select="true()"/>
+		    <xsl:with-param name="drop-frame" select="true()"/>
 		</xsl:call-template>
 	    </xsl:with-param>
 	</xsl:call-template>
@@ -645,7 +645,7 @@
 		<xsl:call-template name="tc:valid">
 		    <xsl:with-param name="timecode">00:01:0o:00</xsl:with-param>
 		    <xsl:with-param name="fps">29.97</xsl:with-param>
-		    <xsl:with-param name="dropframe" select="true()"/>
+		    <xsl:with-param name="drop-frame" select="true()"/>
 		</xsl:call-template>
 	    </xsl:with-param>
 	</xsl:call-template>
@@ -719,7 +719,7 @@
 	    <xsl:with-param name="result">
 		<xsl:call-template name="tc:add">
 		    <xsl:with-param name="timecode1">00:01:00:02</xsl:with-param>
-		    <xsl:with-param name="dropframe1" select="true()"/>
+		    <xsl:with-param name="drop-frame1" select="true()"/>
 		    <xsl:with-param name="timecode2">00:01:00:00</xsl:with-param>
 		</xsl:call-template>
 	    </xsl:with-param>
@@ -775,9 +775,9 @@
 	    <xsl:with-param name="result">
 		<xsl:call-template name="tc:subtract">
 		    <xsl:with-param name="timecode1">23:00:04:29</xsl:with-param>
-		    <xsl:with-param name="dropframe1">1</xsl:with-param>
+		    <xsl:with-param name="drop-frame1">1</xsl:with-param>
 		    <xsl:with-param name="timecode2">00:00:05:00</xsl:with-param>
-		    <xsl:with-param name="dropframe2">1</xsl:with-param>
+		    <xsl:with-param name="drop-frame2">1</xsl:with-param>
 		</xsl:call-template>
 	    </xsl:with-param>
 	</xsl:call-template>
@@ -805,12 +805,12 @@
 	</xsl:call-template>
 
 	<!-- <xsl:call-template name="output-test-result"> -->
-	<!--   <xsl:with-param name="name">tc:to-frames -dropframe</xsl:with-param> -->
+	<!--   <xsl:with-param name="name">tc:to-frames -drop-frame</xsl:with-param> -->
 	<!--   <xsl:with-param name="expect">30</xsl:with-param> -->
 	<!--   <xsl:with-param name="result"> -->
 	<!--   <xsl:call-template name="tc:to-frames"> -->
 	<!-- 	<xsl:with-param name="timecode" select="'00:00:10:00'"/> -->
-	<!-- 	<xsl:with-param name="dropframe">1</xsl:with-param> -->
+	<!-- 	<xsl:with-param name="drop-frame">1</xsl:with-param> -->
 	<!-- 	<xsl:with-param name="fps">30</xsl:with-param> -->
 	<!--   </xsl:call-template> -->
 	<!--   </xsl:with-param> -->
