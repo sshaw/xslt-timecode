@@ -85,6 +85,11 @@ Examples
 	      </xsl:call-template>
 	  </xsl:variable>
 
+Known Issues
+---------
+
+* Under Saxon, `to-frames` returns a value in scientific notation
+
 Templates
 ---------
 
